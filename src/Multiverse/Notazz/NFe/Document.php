@@ -38,9 +38,13 @@ class Document extends Resource
      * @var string
      */
     protected $document_issue_date;
-
+    /**
+     * @var string
+     */
     protected $logistics;
-
+    /**
+     * @var string
+     */
     protected $external_id;
 
     public function __construct()
@@ -213,11 +217,22 @@ class Document extends Resource
         $this->document_issue_date = $document_issue_date;
     }
 
+    /**
+     * Chave de integração da logística já configurada pelo sistema web.
+     * Se encontra no menu Configurações > Logística > Editar
+     *
+     * @param string $logistics
+     */
     public function setDocumentLogistics(string $logistics)
     {
         $this->logistics = $logistics;
     }
 
+    /**
+     * ID do sistema para consultar a nota posteriormente
+     *
+     * @param string $external_id
+     */
     public function setDocumentExternalId(string $external_id)
     {
         $this->external_id = $external_id;
