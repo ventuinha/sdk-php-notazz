@@ -61,6 +61,8 @@ class NotaFiscalNFeSendTest extends TestCase
                     ->basevalue(70.30)
                     ->description('Descrição teste')
                     ->issue_date('2019-07-05 18:11:30')
+                    ->logistics('5a5a165d8385feebec5a21eebd85fc2b')
+                    ->externalId('89678678')
                 ->products()
                     ->add()
                         ->cod(123)
